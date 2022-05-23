@@ -67,7 +67,15 @@ public class Menu {
 
 			for (int i = 0; i < posicao; i++) {
 				if (profs[i].CPF == cpf) {
-					JOptionPane.showMessageDialog(null, cpf + " encontrado no índice " + (i+1));
+					String aux= "";
+					aux += "Nome professor " + (i + 1) + ": " + profs[i].Nome + "\n";
+					aux += "CPF professor " + (i + 1) + ": " + profs[i].CPF + "\n";
+					aux += "Total de aulas do professor " + (i + 1) + ": " + profs[i].TotalAulas + "\n";
+					aux += "Valor das aulas do professor " + (i + 1) + ": " + profs[i].ValorAula + "\n";
+					aux += "Salário base do professor " + (i + 1) + ": " + profs[i].SB() + "\n";
+					aux += "Valor hora atividade do professor " + (i + 1) + ": " + profs[i].HA() + "\n";
+					aux += "Descanso semanal remunerado do professor " + (i + 1) + ": " + profs[i].DSR() + "\n\n";
+					JOptionPane.showMessageDialog(null, cpf + " encontrado no índice " + (i + 1) + "\n"+aux);
 					return i;
 				}
 			}
